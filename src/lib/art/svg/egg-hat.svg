@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Soft shadow on the ground. -->
+  <ellipse cx="32" cy="63" rx="20" ry="1.6" fill="#3a2a22" opacity=".18"/>
+  <g class="egg-body" style="transform-origin: 32px 64px">
+    <!-- Brim: a thin "smile" whose ends flip up hard, dipping at the front. -->
+    <path d="M6 34C10 45 20 51 32 51S54 45 58 34C59 32.5 61.5 32.5 62 34.5C61 51 47 61 32 61S3 51 2 34.5C2.5 32.5 5 32.5 6 34Z" fill="#b07a46"/>
+    <path d="M45 49C51 46 56 41 58 34C59 32.5 61.5 32.5 62 34.5C61 47 53 56 43 59.5C46 56 47 52 45 49Z" fill="#8c5c32"/>
+    <!-- Its front edge, turned slightly under. -->
+    <path d="M2 34.5C3 51 17 61 32 61S61 51 62 34.5C62.5 52 47 64 32 64S1.5 52 2 34.5Z" fill="#7a4e2a"/>
+    <!-- Crown: narrower at the top, with one central crease notched into the top. -->
+    <path d="M18 54C18.5 44 20 32 21.5 24C22 21.5 24 20.5 27 20.5C29.5 20.5 31 21 32 23C33 21 34.5 20.5 37 20.5C40 20.5 42 21.5 42.5 24C44 32 45.5 44 46 54C40 57 24 57 18 54Z" fill="#b07a46"/>
+    <path d="M37 20.5C40 20.5 42 21.5 42.5 24C44 32 45.5 44 46 54C44 55 42 55.6 39.5 56C40.5 44 40 30 37 20.5Z" fill="#8c5c32"/>
+    <!-- The crease: lit on its left wall, shaded on its right. -->
+    <path d="M32 23C30.5 27 30 31.5 31.6 36C32 31.5 32 27 32 23Z" fill="#cf9a62"/>
+    <path d="M32 23C33.8 27 34.2 31.5 32.4 36C32 31.5 32 27 32 23Z" fill="#8c5c32"/>
+    <!-- Dark hat band round the base of the crown. -->
+    <path d="M18.3 45.5Q32 48.5 45.7 45.5L46 54C40 57 24 57 18 54Z" fill="#4a3020"/>
+    <!-- Lit left side and a couple of specks. -->
+    <path d="M23.5 27C22.6 33 22 38 21.8 42.5" fill="none" stroke="#cf9a62" stroke-width="2.4" stroke-linecap="round"/>
+    <path d="M6 41C8.5 45.5 12 49 16 51.5" fill="none" stroke="#cf9a62" stroke-width="2" stroke-linecap="round"/>
+    <circle cx="26" cy="37" r=".9" fill="#cf9a62"/>
+    <circle cx="12" cy="51.5" r=".9" fill="#cf9a62"/>
+  </g>
+</svg>

@@ -1,0 +1,25 @@
+node_modules
+out
+dist
+build/
+data/
+pb_data/
+pocketbase
+coverage/
+*.db
+*.db-shm
+*.db-wal
+*.tsbuildinfo
+.svelte-kit/
+.vercel/
+*.local
+
+# dotenv environment variable files
+.env
+.env.development.local
+.env.test.local
+.env.production.local
+.env.local
+
+# Finder (MacOS) folder config
+.DS_Store

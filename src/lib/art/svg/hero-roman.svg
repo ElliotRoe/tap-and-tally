@@ -1,0 +1,141 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 480" font-family="Nunito Sans, system-ui, sans-serif">
+  <defs>
+    <filter id="hero-roman-shadow" filterUnits="userSpaceOnUse" x="-100" y="-100" width="800" height="700">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#5a3a20" flood-opacity=".13"/>
+    </filter>
+    <!-- hill-defs:start -->
+    <filter id="hero-roman-hill-tex-fine-cbc7a0" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency=".95" numOctaves="2" seed="3" stitchTiles="stitch" result="noise"/>
+      <feColorMatrix in="noise" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -2.4 1.02" result="alpha"/>
+      <feComponentTransfer in="alpha" result="specks"><feFuncA type="discrete" tableValues="0 .55 .85 1"/></feComponentTransfer>
+      <feFlood flood-color="#cbc7a0" result="ink"/>
+      <feComposite in="ink" in2="specks" operator="in"/>
+    </filter>
+    <filter id="hero-roman-hill-tex-fine-b3ae80" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency=".95" numOctaves="2" seed="3" stitchTiles="stitch" result="noise"/>
+      <feColorMatrix in="noise" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -2.4 1.02" result="alpha"/>
+      <feComponentTransfer in="alpha" result="specks"><feFuncA type="discrete" tableValues="0 .55 .85 1"/></feComponentTransfer>
+      <feFlood flood-color="#b3ae80" result="ink"/>
+      <feComposite in="ink" in2="specks" operator="in"/>
+    </filter>
+    <filter id="hero-roman-hill-tex-coarse-c1bc90" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency=".22" numOctaves="4" seed="8" stitchTiles="stitch" result="noise"/>
+      <feColorMatrix in="noise" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -3.4 1.42" result="alpha"/>
+      <feComponentTransfer in="alpha" result="specks"><feFuncA type="discrete" tableValues="0 .55 .85 1"/></feComponentTransfer>
+      <feFlood flood-color="#c1bc90" result="ink"/>
+      <feComposite in="ink" in2="specks" operator="in"/>
+    </filter>
+    <filter id="hero-roman-hill-tex-speck-f4f2e3" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="1.3" numOctaves="1" seed="21" stitchTiles="stitch" result="noise"/>
+      <feColorMatrix in="noise" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -3.4 1.45" result="alpha"/>
+      <feComponentTransfer in="alpha" result="specks"><feFuncA type="discrete" tableValues="0 .55 .85 1"/></feComponentTransfer>
+      <feFlood flood-color="#f4f2e3" result="ink"/>
+      <feComposite in="ink" in2="specks" operator="in"/>
+    </filter>
+    <filter id="hero-roman-hill-tex-rib-3b5235" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency=".55 .018" numOctaves="2" seed="11" stitchTiles="stitch" result="noise"/>
+      <feColorMatrix in="noise" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -3.0 1.5" result="alpha"/>
+      <feComponentTransfer in="alpha" result="specks"><feFuncA type="discrete" tableValues="0 .55 .85 1"/></feComponentTransfer>
+      <feFlood flood-color="#3b5235" result="ink"/>
+      <feComposite in="ink" in2="specks" operator="in"/>
+    </filter>
+    <filter id="hero-roman-hill-tex-rib-809a66" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency=".55 .018" numOctaves="2" seed="11" stitchTiles="stitch" result="noise"/>
+      <feColorMatrix in="noise" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -3.0 1.5" result="alpha"/>
+      <feComponentTransfer in="alpha" result="specks"><feFuncA type="discrete" tableValues="0 .55 .85 1"/></feComponentTransfer>
+      <feFlood flood-color="#809a66" result="ink"/>
+      <feComposite in="ink" in2="specks" operator="in"/>
+    </filter>
+    <clipPath id="hero-roman-hill-clip-back"><path d="M-20 54C-4 22 30 6 64 6s54 18 58 36c3 12-10 18-40 18H6c-20 0-30-2-26-6z"/></clipPath>
+    <clipPath id="hero-roman-hill-clip-front"><path d="M-110 50C-92 2-46-24 0-24s88 24 98 58c4 16-14 24-54 24h-118c-30 0-42-4-36-8z"/></clipPath>
+    <clipPath id="hero-roman-hill-clip-lit"><path d="M-110 50C-92 2-46-24 0-24c-26 10-44 38-50 82h-34c-30 0-42-4-36-8z"/></clipPath>
+    <clipPath id="hero-roman-hill-clip-cypress-tree"><path d="M46 -110C51.4 -98.7 58.0 -81.8 58.0 -55.5C58.0 -29.2 54.4 -16 46 -16C37.6 -16 34.0 -29.2 34.0 -55.5C34.0 -81.8 40.6 -98.7 46 -110z"/></clipPath>
+    <clipPath id="hero-roman-hill-clip-cypress-lit"><path d="M46 -110C40.6 -98.7 34.0 -81.8 34.0 -55.5C34.0 -29.2 37.6 -16 46 -16z"/></clipPath>
+    <linearGradient id="hero-roman-hill-fade-1-g" gradientUnits="userSpaceOnUse" x1="0" y1="6" x2="0" y2="60"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset="1" stop-color="#fff" stop-opacity="0.6"/></linearGradient>
+    <mask id="hero-roman-hill-fade-1" maskUnits="userSpaceOnUse" x="-130" y="-120" width="290" height="200"><rect x="-130" y="-120" width="290" height="200" fill="url(#hero-roman-hill-fade-1-g)"/></mask>
+    <linearGradient id="hero-roman-hill-fade-2-g" gradientUnits="userSpaceOnUse" x1="0" y1="-24" x2="0" y2="60"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset="1" stop-color="#fff" stop-opacity="0.75"/></linearGradient>
+    <mask id="hero-roman-hill-fade-2" maskUnits="userSpaceOnUse" x="-130" y="-120" width="290" height="200"><rect x="-130" y="-120" width="290" height="200" fill="url(#hero-roman-hill-fade-2-g)"/></mask>
+    <linearGradient id="hero-roman-hill-fade-3-g" gradientUnits="userSpaceOnUse" x1="-20" y1="0" x2="100" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset="1" stop-color="#fff" stop-opacity="0.5"/></linearGradient>
+    <mask id="hero-roman-hill-fade-3" maskUnits="userSpaceOnUse" x="-130" y="-120" width="290" height="200"><rect x="-130" y="-120" width="290" height="200" fill="url(#hero-roman-hill-fade-3-g)"/></mask>
+    <linearGradient id="hero-roman-hill-fade-4-g" gradientUnits="userSpaceOnUse" x1="0" y1="-24" x2="0" y2="20"><stop offset="0" stop-color="#fff" stop-opacity="0.9"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+    <mask id="hero-roman-hill-fade-4" maskUnits="userSpaceOnUse" x="-130" y="-120" width="290" height="200"><rect x="-130" y="-120" width="290" height="200" fill="url(#hero-roman-hill-fade-4-g)"/></mask>
+    <linearGradient id="hero-roman-hill-fade-5-g" gradientUnits="userSpaceOnUse" x1="34.0" y1="0" x2="58.0" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0.2"/><stop offset="1" stop-color="#fff" stop-opacity="0.9"/></linearGradient>
+    <mask id="hero-roman-hill-fade-5" maskUnits="userSpaceOnUse" x="-130" y="-120" width="290" height="200"><rect x="-130" y="-120" width="290" height="200" fill="url(#hero-roman-hill-fade-5-g)"/></mask>
+    <linearGradient id="hero-roman-hill-fade-6-g" gradientUnits="userSpaceOnUse" x1="0" y1="-110" x2="0" y2="-16"><stop offset="0" stop-color="#fff" stop-opacity="0.9"/><stop offset="1" stop-color="#fff" stop-opacity="0.3"/></linearGradient>
+    <mask id="hero-roman-hill-fade-6" maskUnits="userSpaceOnUse" x="-130" y="-120" width="290" height="200"><rect x="-130" y="-120" width="290" height="200" fill="url(#hero-roman-hill-fade-6-g)"/></mask>
+    <!-- hill-defs:end -->
+  </defs>
+
+  <!-- hill:start: generated by scripts/hill-art.py -->
+  <g transform="translate(468 128)">
+    <path d="M-20 54C-4 22 30 6 64 6s54 18 58 36c3 12-10 18-40 18H6c-20 0-30-2-26-6z" fill="#e6e3c6"/>
+    <g clip-path="url(#hero-roman-hill-clip-back)" mask="url(#hero-roman-hill-fade-1)"><rect x="-130" y="-120" width="290" height="200" fill="#000" filter="url(#hero-roman-hill-tex-fine-cbc7a0)"/></g>
+    <path d="M-110 50C-92 2-46-24 0-24s88 24 98 58c4 16-14 24-54 24h-118c-30 0-42-4-36-8z" fill="#d8d4aa"/>
+    <g clip-path="url(#hero-roman-hill-clip-front)" mask="url(#hero-roman-hill-fade-2)"><rect x="-130" y="-120" width="290" height="200" fill="#000" filter="url(#hero-roman-hill-tex-fine-b3ae80)"/></g>
+    <g clip-path="url(#hero-roman-hill-clip-front)" mask="url(#hero-roman-hill-fade-3)"><rect x="-130" y="-120" width="290" height="200" fill="#000" filter="url(#hero-roman-hill-tex-coarse-c1bc90)"/></g>
+    <path d="M-110 50C-92 2-46-24 0-24c-26 10-44 38-50 82h-34c-30 0-42-4-36-8z" fill="#e9e6cd"/>
+    <g clip-path="url(#hero-roman-hill-clip-lit)" mask="url(#hero-roman-hill-fade-4)"><rect x="-130" y="-120" width="290" height="200" fill="#000" filter="url(#hero-roman-hill-tex-speck-f4f2e3)"/></g>
+    <rect x="44.0" y="-19" width="4" height="9" fill="#6e5a44"/>
+    <path d="M46 -110C51.4 -98.7 58.0 -81.8 58.0 -55.5C58.0 -29.2 54.4 -16 46 -16C37.6 -16 34.0 -29.2 34.0 -55.5C34.0 -81.8 40.6 -98.7 46 -110z" fill="#4d6644"/>
+    <g clip-path="url(#hero-roman-hill-clip-cypress-tree)" mask="url(#hero-roman-hill-fade-5)"><rect x="-130" y="-120" width="290" height="200" fill="#000" filter="url(#hero-roman-hill-tex-rib-3b5235)"/></g>
+    <path d="M46 -110C40.6 -98.7 34.0 -81.8 34.0 -55.5C34.0 -29.2 37.6 -16 46 -16z" fill="#66804f"/>
+    <g clip-path="url(#hero-roman-hill-clip-cypress-lit)" mask="url(#hero-roman-hill-fade-6)"><rect x="-130" y="-120" width="290" height="200" fill="#000" filter="url(#hero-roman-hill-tex-rib-809a66)"/></g>
+  </g>
+  <!-- hill:end -->
+
+  <!-- A class on the Grid: tiles of initials, today's counts, one student absent. -->
+  <g filter="url(#hero-roman-shadow)">
+    <rect x="106" y="86" width="384" height="336" rx="20" fill="#fffdf9" stroke="#ecdcc6"/>
+  </g>
+  <text x="134" y="126" font-size="12" font-weight="800" letter-spacing="1.4" fill="#9a8a78">PERIOD 2 · ALGEBRA</text>
+  <text x="134" y="152" font-size="20" font-weight="800" fill="#2e2219">Tap a student</text>
+    <rect x="134" y="168" width="100" height="68" rx="10" fill="#fffdf9" stroke="#d9bfa0"/>
+  <text x="184" y="202" text-anchor="middle" font-size="20" font-weight="800" fill="#2e2219">MG</text>
+  <text x="184" y="222" text-anchor="middle" font-size="11" font-weight="700" fill="#9a8a78">Maria G.</text>
+  <rect x="246" y="168" width="100" height="68" rx="10" fill="#fffdf9" stroke="#d9bfa0"/>
+  <text x="296" y="202" text-anchor="middle" font-size="20" font-weight="800" fill="#2e2219">TN</text>
+  <text x="296" y="222" text-anchor="middle" font-size="11" font-weight="700" fill="#9a8a78">Tom N.</text>
+  <rect x="358" y="168" width="100" height="68" rx="10" fill="#fffdf9" stroke="#ecdcc6"/>
+  <text x="408" y="202" text-anchor="middle" font-size="20" font-weight="800" fill="#b8a796">AP</text>
+  <text x="408" y="222" text-anchor="middle" font-size="11" font-weight="700" fill="#9a8a78">Ava P.</text>
+  <rect x="134" y="248" width="100" height="68" rx="10" fill="#f1e8da" stroke="#d9c6ab" stroke-dasharray="4 4"/>
+  <text x="184" y="282" text-anchor="middle" font-size="20" font-weight="800" fill="#b3a28e">BO</text>
+  <text x="184" y="302" text-anchor="middle" font-size="11" font-weight="700" fill="#b3a28e">Absent</text>
+  <rect x="246" y="248" width="100" height="68" rx="10" fill="#fffdf9" stroke="#d9bfa0"/>
+  <text x="296" y="282" text-anchor="middle" font-size="20" font-weight="800" fill="#2e2219">LC</text>
+  <text x="296" y="302" text-anchor="middle" font-size="11" font-weight="700" fill="#9a8a78">Liam C.</text>
+  <rect x="358" y="248" width="100" height="68" rx="10" fill="#fffdf9" stroke="#ecdcc6"/>
+  <text x="408" y="282" text-anchor="middle" font-size="20" font-weight="800" fill="#b8a796">NB</text>
+  <text x="408" y="302" text-anchor="middle" font-size="11" font-weight="700" fill="#9a8a78">Noah B.</text>
+  <rect x="134" y="328" width="100" height="68" rx="10" fill="#fffdf9" stroke="#d9bfa0"/>
+  <text x="184" y="362" text-anchor="middle" font-size="20" font-weight="800" fill="#2e2219">ZK</text>
+  <text x="184" y="382" text-anchor="middle" font-size="11" font-weight="700" fill="#9a8a78">Zoe K.</text>
+  <rect x="246" y="328" width="100" height="68" rx="10" fill="#fffdf9" stroke="#ecdcc6"/>
+  <text x="296" y="362" text-anchor="middle" font-size="20" font-weight="800" fill="#b8a796">CH</text>
+  <text x="296" y="382" text-anchor="middle" font-size="11" font-weight="700" fill="#9a8a78">Cher</text>
+  <rect x="358" y="328" width="100" height="68" rx="10" fill="#fffdf9" stroke="#ecdcc6"/>
+  <text x="408" y="362" text-anchor="middle" font-size="20" font-weight="800" fill="#b8a796">EW</text>
+  <text x="408" y="382" text-anchor="middle" font-size="11" font-weight="700" fill="#9a8a78">Eli W.</text>
+
+  <!-- A lasso thrown round Maria's tile, its rope trailing off the card. -->
+  <g fill="none" stroke="#6e2d6a" stroke-width="6" stroke-linecap="round">
+    <ellipse cx="184" cy="202" rx="63" ry="44" transform="rotate(-8 184 202)"/>
+    <path d="M132 230c-30 22-62 30-78 60s-10 64 12 86"/>
+  </g>
+  <circle cx="131" cy="229" r="8" fill="#fffdf9" stroke="#451a43" stroke-width="4"/>
+
+  <!-- Today's counts sit on top of the rope. -->
+  <circle cx="230" cy="172" r="12" fill="#6e2d6a" stroke="#fffdf9" stroke-width="2.5"/>
+  <text x="230" y="177" text-anchor="middle" font-size="12" font-weight="800" fill="#fffaf2">3</text>
+  <circle cx="342" cy="172" r="12" fill="#6e2d6a" stroke="#fffdf9" stroke-width="2.5"/>
+  <text x="342" y="177" text-anchor="middle" font-size="12" font-weight="800" fill="#fffaf2">1</text>
+  <circle cx="342" cy="252" r="12" fill="#6e2d6a" stroke="#fffdf9" stroke-width="2.5"/>
+  <text x="342" y="257" text-anchor="middle" font-size="12" font-weight="800" fill="#fffaf2">2</text>
+  <circle cx="230" cy="332" r="12" fill="#6e2d6a" stroke="#fffdf9" stroke-width="2.5"/>
+  <text x="230" y="337" text-anchor="middle" font-size="12" font-weight="800" fill="#fffaf2">1</text>
+
+  <g transform="translate(330 404) rotate(-4)" filter="url(#hero-roman-shadow)">
+    <rect width="226" height="50" rx="14" fill="#6e2d6a"/>
+    <text x="22" y="32" font-size="16" font-weight="800" fill="#fffaf2">🙋 Maria · Participation</text>
+  </g>
+</svg>

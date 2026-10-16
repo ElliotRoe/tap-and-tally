@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f7efe0" />
+    <link rel="icon" href="/icon.svg" />
+    <!-- The hidden Roman theme, set before the page paints so it never flashes Western. -->
+    <script>
+      try {
+        if (localStorage.getItem("tap-and-tally-theme") === "roman") {
+          document.documentElement.dataset.theme = "roman";
+          document.querySelector('link[rel="icon"]').href = "/icon-roman.svg";
+        }
+      } catch {}
+    </script>
+    %sveltekit.head%
+  </head>
+  <body data-sveltekit-preload-data="hover">
+    <div style="display: contents">%sveltekit.body%</div>
+    <!-- Cloudflare Web Analytics. PUBLIC_CF_BEACON_TOKEN is set only on the
+         production Vercel environment, so local and preview builds don't count visits. -->
+    <script>
+      {
+        const token = "%sveltekit.env.PUBLIC_CF_BEACON_TOKEN%";
+        if (token) {
+          const beacon = document.createElement("script");
+          beacon.type = "module";
+          beacon.dataset.cfBeacon = JSON.stringify({ token });
+          beacon.src = "https://static.cloudflareinsights.com/beacon.min.js";
+          document.body.append(beacon);
+        }
+      }
+    </script>
+  </body>
+</html>
