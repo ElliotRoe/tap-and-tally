@@ -13,6 +13,7 @@
   import RoomStage from "./RoomStage.svelte";
   import { cropOf } from "$lib/domain/room";
   import StudentTile from "./StudentTile.svelte";
+  import TotalBadge from "./TotalBadge.svelte";
   import TapBox from "./TapBox.svelte";
 
   let {
@@ -108,7 +109,7 @@
   }
 </script>
 
-{#snippet tile(student: Student, compact = false)}
+{#snippet tile(student: Student, compact = false, showTotal = true)}
   <button
     class="tile-button"
     class:pointed={pointTo && student.id === first?.id}
@@ -121,6 +122,7 @@
       absent={absentToday.has(student.id)}
       flash={flashes[student.id]}
       {compact}
+      {showTotal}
     />
     {#if pointTo && student.id === first?.id}
       <span class="pointer" aria-hidden="true">Tap a student to track something</span>
@@ -144,9 +146,19 @@
         {@const student = byId.get(seating[seat.id])}
         <div class="box" style={placedStyle(seat)}>
           {#if student}
-            <div style={uprightStyle(seat)}>{@render tile(student, true)}</div>
+            <div style={uprightStyle(seat)}>{@render tile(student, true, false)}</div>
           {:else}<div class="empty-desk"></div>{/if}
         </div>
+      {/each}
+      <!-- Bubbles after every desk, so a neighbouring desk never covers one. -->
+      {#each layout.seats as seat (seat.id)}
+        {@const student = byId.get(seating[seat.id])}
+        {@const total = student ? (totals.get(student.id) ?? 0) : 0}
+        {#if student && total > 0 && !absentToday.has(student.id)}
+          <div class="box badge-layer" style={placedStyle(seat)} aria-hidden="true">
+            <div style={uprightStyle(seat)}><TotalBadge {total} /></div>
+          </div>
+        {/if}
       {/each}
       </RoomStage>
     </div>
@@ -219,6 +231,10 @@
   .fill .room-area {
     height: 100%;
     container-type: size;
+  }
+
+  .badge-layer {
+    pointer-events: none;
   }
 
   /* Centred on the desk's edge, so empty desks pushed together share one dashed line. */

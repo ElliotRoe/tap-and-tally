@@ -6,6 +6,7 @@
 <script lang="ts">
   import { initials, shortName } from "$lib/domain/students";
   import type { Student } from "$lib/domain/types";
+  import TotalBadge from "./TotalBadge.svelte";
 
   let {
     student,
@@ -13,12 +14,15 @@
     absent = false,
     compact = false,
     flash = "",
+    showTotal = true,
   }: {
     student: Student;
     total?: number;
     absent?: boolean;
     compact?: boolean;
     flash?: string;
+    /** Off when the bubble is drawn in a layer above every desk instead. */
+    showTotal?: boolean;
   } = $props();
 </script>
 
@@ -27,8 +31,8 @@
   {#if absent}<span class="cross" aria-hidden="true"></span>{/if}
   <span class="letters">{initials(student)}</span>
   <span class="name">{absent ? "Absent" : shortName(student)}</span>
-  {#if total !== undefined && total > 0 && !absent}
-    <span class="total" aria-label="{total} today">{total}</span>
+  {#if showTotal && total !== undefined && total > 0 && !absent}
+    <TotalBadge {total} />
   {/if}
   {#if flash}<span class="flash" role="status">{flash}</span>{/if}
 </span>
@@ -115,23 +119,6 @@
   .absent .letters,
   .absent .name {
     color: #b3a28e;
-  }
-
-  .total {
-    position: absolute;
-    top: -9px;
-    right: -9px;
-    min-width: 26px;
-    height: 26px;
-    padding: 0 0.4rem;
-    display: grid;
-    place-items: center;
-    border-radius: 999px;
-    background: var(--accent);
-    color: #fffaf2;
-    font-weight: 800;
-    font-size: 0.8rem;
-    border: 2.5px solid var(--surface);
   }
 
   /* The hold: a soft wash sweeping in from the left, with a shadowed leading edge. */
