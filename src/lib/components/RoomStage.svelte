@@ -54,8 +54,15 @@
     width: min(100cqw, 100cqh * var(--ratio));
   }
 
+  /* A cropped room is bigger than the stage and spills past it, invisibly. Only what's
+     drawn in it takes clicks, so the spill never covers buttons nearby (like Save seats). */
   .room {
     position: absolute;
+    pointer-events: none;
+  }
+
+  :where(.room) > :global(*) {
+    pointer-events: auto;
   }
 
   .room :global(.box) {
